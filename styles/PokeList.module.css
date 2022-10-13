@@ -6,7 +6,7 @@
 
 .main {
     min-height: 100vh;
-    display: grid;
+    display: flex;
     grid-template-columns: 350px 350px;    
     flex: 2;
     justify-content: space-around;
@@ -15,6 +15,10 @@
 
 .card {
     margin: 20px;
+}
+
+.loading {
+    text-align: center;
 }
 
 @media (max-width: 600px) {

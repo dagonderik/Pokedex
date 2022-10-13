@@ -1,0 +1,24 @@
+.container {
+    padding: 1px;
+    border-bottom: 1px solid;
+    display: flex;
+    justify-content: space-between;
+}
+
+.h1 {
+    text-align: center;
+}
+
+
+
+@media (max-width: 600px) {
+    .container {
+        display: grid;
+        justify-content: center;
+    }
+
+    .navBar {
+      display: flex;
+      justify-content: space-between;
+    }
+  }

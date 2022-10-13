@@ -8,19 +8,18 @@ export default function Home() {
     <div className={styles.container}>
 
       <Head>
-        <title>Pokedex</title>
+        <title>PokeSearch</title>
         <meta name="description" content="Pokedex project" />
         <link rel="icon" href="/favicon.ico" />
-        <link
-          rel="stylesheet"
-          href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap"
-        />
       </Head>
 
       <main className={styles.main}>
-        <h1 className={styles.title}>
-          Login to your personal Pokedex
-        </h1>
+        <div>
+          <h1 className={styles.title}>
+            PokeSearch
+          </h1>
+          <h4 className={styles.description}>Login to enjoy a personal Pokemon experience</h4>
+        </div>
         <div className={styles.login}>
           <div className={styles.loginInput}>
             <TextField id='email' type="email" label='Email' variant='outlined'/>
