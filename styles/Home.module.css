@@ -1,0 +1,15 @@
+.container {
+    padding: 0 2rem;
+    background-color: beige;
+    font-family: 'Roboto';
+}
+
+.header {
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+}
+
+.main {
+    min-height: 100vh;
+}
