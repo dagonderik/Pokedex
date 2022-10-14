@@ -1,3 +1,4 @@
+
 .container {
     padding: 0 2rem;
     background-color: beige;
@@ -15,6 +16,14 @@
 
 .card {
     margin: 20px;
+    transition-duration: 0.5s;
+}
+
+
+.card:hover {
+    /* border-left: 15px blue solid; */
+    transform: scale(105%);
+    transform-origin: 50%;
 }
 
 .loading {
