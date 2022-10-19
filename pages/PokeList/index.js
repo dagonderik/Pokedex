@@ -10,7 +10,7 @@ import { Card, CardMedia, CardContent, Typography } from '@mui/material';
 export const getStaticProps = async () => {
 
   const interval = {
-    limit: 950,
+    limit: 50,
     offset: 0
   }
   

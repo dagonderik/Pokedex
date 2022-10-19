@@ -15,6 +15,32 @@
 
 .card {
     margin: 20px;
+    transition-duration: 0.5s;
+}
+
+.card:hover {
+    transform: scale(105%);
+}
+
+.content {
+    padding-top: 10px;
+}
+
+
+.cone1:hover, .cone2:hover, .cone3:hover, .cone4:hover {
+    transition: 1s;
+    transform: scale(115%);
+}
+
+.wheel {
+    /* overflow: hidden; */
+    /* position: absolute; */
+    left: 35vw;
+    width: 200px;
+    height: 200px;
+    border: solid black 1px;
+    border-radius: 50%;
+    background-color: blue
 }
 
 @media (max-width: 600px) {
@@ -23,4 +49,5 @@
       grid-template-columns: minmax(250px,350px);
     }
   
-  }
+}
+

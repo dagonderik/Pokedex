@@ -5,29 +5,6 @@ import Pokedex from 'pokedex-promise-v2';
 import Header from '../../components/Header/Header.js';
 import Footer from '../../components/Footer/Footer.js';
 
-
-const P = new Pokedex();
-const interval = {
-  limit: 100,
-  offset: 1
-}
-
-P.getBerriesList()
-  .then((response) => {
-    const urlList = response.results.map(results => results.url);
-    // Promise.all(urlList.map(u => fetch(u)))
-    // .then(responses => Promise.all(responses.map(res => res.json())))
-    // .then(monsters => {
-    //   console.log(monsters);
-    // })
-    console.log(urlList[0]);
-    
-  })
-    
-    
-
-
-
 export default function Home() {
 	return (
     <div className={Style.container}>
@@ -41,6 +18,27 @@ export default function Home() {
       <Header/>
       
       <div className={Style.main}>
+        <div className={Style.content}>
+          <div className={Style.wheel}>
+            
+          </div>
+
+          <div className={Style.wheel}>
+            
+          </div>
+
+          <div className={Style.wheel}>
+            
+          </div>
+
+          <div className={Style.wheel}>
+            
+          </div>
+        </div>
+  
+      </div>
+
+      {/* <div className={Style.main}>
         <div className={Style.card}>
           <Card sx={{ maxWidth: 350, maxHeight: 450 }}>
             <CardActionArea component={Link} href='/PokeList'>
@@ -124,7 +122,7 @@ export default function Home() {
             </CardActionArea>
           </Card>
         </div>
-      </div>
+      </div>  */}
       <Footer></Footer>
     </div>
 
