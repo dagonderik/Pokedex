@@ -5,24 +5,24 @@
     padding: 0 2rem;
     background-color: beige;
     font-family: 'Roboto';
-    --normal: #A8A77A;
-	--fire: #EE8130;
-	--water: #6390F0;
-	--electric: #F7D02C;
-	--grass: #7AC74C;
-	--ice: #96D9D6;
-	--fighting: #C22E28;
-	--poison: #A33EA1;
-	--ground: #E2BF65;
-	--flying: #A98FF3;
-	--psychic: #F95587;
-	--bug: #A6B91A;
-	--rock: #B6A136;
-	--ghost: #735797;
-	--dragon: #6F35FC;
-	--dark: #705746;
-	--steel: #B7B7CE;
-	--fairy: #D685AD;
+    --normal: linear-gradient( #A8A77A, #85845e);
+	--fire: linear-gradient( #EE8130, #c26823);
+	--water: linear-gradient( #6390F0, #496bb4);
+	--electric: linear-gradient(#F7D02C, #b69820);
+	--grass: linear-gradient( #7AC74C, #45861f);
+	--ice: linear-gradient( #96D9D6, #6c9e9c);
+	--fighting: linear-gradient( #C22E28, #851e1b);
+	--poison: linear-gradient( #A33EA1, #702c6f);
+	--ground: linear-gradient( #E2BF65, #ac914c);
+	--flying: linear-gradient( #A98FF3, #7361a5);
+	--psychic: linear-gradient( #F95587, #b84165);
+	--bug: linear-gradient( #A6B91A, #7c8a15);
+	--rock: linear-gradient( #B6A136, #7e6f25);
+	--ghost: linear-gradient( #735797, #48375e);
+	--dragon: linear-gradient( #6F35FC, #5328c2);
+	--dark: linear-gradient( #705746, #46362c);
+	--steel: linear-gradient( #B7B7CE, #878797);
+	--fairy: linear-gradient( #D685AD, #9b607e);
 }
 
 .main {
@@ -50,6 +50,7 @@
 }
 
 .imgcontainer {
+    background-color: #4E6C50;
     padding: 10px;
     display: flex;
     flex-direction: column;
@@ -71,7 +72,7 @@
 }
 
 .types {
-    background-color: aliceblue;
+    border: solid 1px rgb(124, 122, 122);
 }
 
 .pokeimg {
@@ -82,4 +83,29 @@
 
 .loading {
     text-align: center;
+}
+
+@media (max-width: 483px) {
+    .MuiCardMediaimg {
+        display: flex;
+        height:150px;
+        max-width: 400px;
+        width: 300px;
+    }
+    
+    .card {
+        margin-left: 0;
+        margin-right: 0;
+        text-overflow: ellipsis;
+    }
+
+    .cardBody {
+        width: 130px;
+    }
+    .pokemonNumber {
+        padding-top: 0;
+        margin-top: -6px;
+        padding-right: 140px;
+        
+    }
 }
