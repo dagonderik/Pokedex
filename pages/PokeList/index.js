@@ -50,7 +50,7 @@ export default function PokeList({ pokemons }) {
                           <div variant="body2" color="text.secondary" align="center">
                               {pokemon.types.map((type,i) => {
                                 return(
-                                  <p className={styles.types} style={{backgroundColor: `var(--${type.type.name})` }}> {type.type.name} </p>
+                                  <p key={type.type.name} className={styles.types} style={{backgroundColor: `var(--${type.type.name})` }}> {type.type.name} </p>
                                 )
                               })}
                           </div>
