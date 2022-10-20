@@ -41,6 +41,7 @@
 
 .MuiCardMediaimg {
     background-color: #4E6C50;
+    height: 300px;
 }
 
 .card:hover {
