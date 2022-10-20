@@ -1,4 +1,3 @@
-
 .container {
     padding: 0 2rem;
     background-color: beige;
@@ -19,21 +18,47 @@
     transition-duration: 0.5s;
 }
 
+.MuiCardMediaimg {
+    background-color: #4E6C50;
+}
 
 .card:hover {
-    /* border-left: 15px blue solid; */
     transform: scale(105%);
     transform-origin: 50%;
+    
+}
+
+.imgcontainer {
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.cardBody {
+    background-color: #AA8B56;
+    align-self: flex-end;
+    padding: 20px 16px ;
+    text-transform: capitalize;
+    height: 150px;
+}
+
+.pokemonNumber {
+    position: absolute;
+    padding-top: 140px;
+    
+}
+
+.types {
+    background-color: aliceblue;
+}
+
+.pokeimg {
+    background-image: url("https://wallup.net/wp-content/uploads/2017/11/17/301412-Pokemon-748x421.jpg");
+    background-size: cover;
+    border-radius: 50%;
 }
 
 .loading {
     text-align: center;
 }
-
-@media (max-width: 600px) {
-    .main {
-      width: 100%;
-      grid-template-columns: minmax(250px,350px);
-    }
-  
-  }

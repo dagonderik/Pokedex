@@ -1,7 +1,6 @@
 import { Link, Card, CardActionArea, CardContent, CardMedia, TextField, Typography } from "@mui/material";
 import Style from "../../styles/Home.module.css"
 import Head from "next/head";
-import Pokedex from 'pokedex-promise-v2';
 import Header from '../../components/Header/Header.js';
 import Footer from '../../components/Footer/Footer.js';
 
@@ -17,28 +16,8 @@ export default function Home() {
 
       <Header/>
       
+
       <div className={Style.main}>
-        <div className={Style.content}>
-          <div className={Style.wheel}>
-            
-          </div>
-
-          <div className={Style.wheel}>
-            
-          </div>
-
-          <div className={Style.wheel}>
-            
-          </div>
-
-          <div className={Style.wheel}>
-            
-          </div>
-        </div>
-  
-      </div>
-
-      {/* <div className={Style.main}>
         <div className={Style.card}>
           <Card sx={{ maxWidth: 350, maxHeight: 450 }}>
             <CardActionArea component={Link} href='/PokeList'>
@@ -122,7 +101,7 @@ export default function Home() {
             </CardActionArea>
           </Card>
         </div>
-      </div>  */}
+      </div> 
       <Footer></Footer>
     </div>
 

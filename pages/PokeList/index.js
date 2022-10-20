@@ -10,7 +10,7 @@ import { Card, CardMedia, CardContent, Typography } from '@mui/material';
 export const getStaticProps = async () => {
 
   const interval = {
-    limit: 50,
+    limit: 150,
     offset: 0
   }
   
@@ -19,7 +19,7 @@ export const getStaticProps = async () => {
   const urls = await rawData.results.map(u => u.url);
   const pokeList = await Promise.all(urls.map(u => fetch(u)));
   const pokemonList = await Promise.all(pokeList.map( res => res.json()));
-  console.log(pokemonList[0]);
+  console.log(pokemonList[0].types[0].type.name);
   
 
   return {
@@ -28,9 +28,9 @@ export const getStaticProps = async () => {
 
 }
 
-
 export default function PokeList({ pokemons }) {
 
+  const port = "blue";
 
   const [pokemonList, setPokemonList] = useState();
 
@@ -43,21 +43,27 @@ export default function PokeList({ pokemons }) {
             <div className={styles.main}>
               {(pokemons ? pokemons.map((pokemon,i) => {
                 return (
-                  <div className={styles.card}>
-                    <Card sx={{ maxWidth:250, maxHeight:450}}>
-                      <CardMedia
-                      component="img"
-                      height="250"
-                      image={pokemon.sprites.front_default}
-                      alt="pokedex icon"
-                      />
-                      <CardContent>
-                        <Typography gutterBottom variant="h5" component="div">
-                          {`${pokemon.id} - ${pokemon.name}`}
-                        </Typography>
-                        <Typography variant="body2" color="text.secondary">
-                          Search pokemons by name 
-                        </Typography>
+                  <div className={styles.card} key={pokemon.id}>
+                    <Card className={styles.MuiCardMediaimg} sx={{ maxWidth:250, height:300}}>
+                      <div className={styles.imgcontainer}>
+                        <h3 className={styles.pokemonNumber}>{pokemon.id}</h3>
+                        <img className={styles.pokeimg} src={pokemon.sprites.front_default} height='150px'/>                
+                      </div>
+                      <CardContent style={{padding: '0'}}>
+                        <div className={styles.cardBody}>
+                          <Typography gutterBottom variant="h5" component="div" align="center">
+                            {pokemon.name}
+                          </Typography>
+                          <Typography variant="body2" color="text.secondary" align="center">
+                            <div>
+                              {pokemon.types.map((type,i) => {
+                                return(
+                                  <p className={styles.types} style={{backgroundColor: port}}> {type.type.name} </p>
+                                )
+                              })}
+                            </div>
+                          </Typography>
+                        </div>
                       </CardContent>
                     </Card>
                   </div>
