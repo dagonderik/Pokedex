@@ -1,16 +1,14 @@
 import Header from '../../components/Header/Header.js';
 import Footer from '../../components/Footer/Footer.js';
 import styles from '../../styles/PokeList.module.css';
-import Pokedex from 'pokedex-promise-v2';
-import React, { useState, useEffect } from 'react';
-import { Card, CardMedia, CardContent, Typography } from '@mui/material';
+import { Card, CardContent, Typography } from '@mui/material';
 
 
 
 export const getStaticProps = async () => {
 
   const interval = {
-    limit: 150,
+    limit: 151,
     offset: 0
   }
   
@@ -30,11 +28,6 @@ export const getStaticProps = async () => {
 
 export default function PokeList({ pokemons }) {
 
-  const port = "blue";
-
-  const [pokemonList, setPokemonList] = useState();
-
- 
 
 	return (
         <div>
@@ -54,15 +47,13 @@ export default function PokeList({ pokemons }) {
                           <Typography gutterBottom variant="h5" component="div" align="center">
                             {pokemon.name}
                           </Typography>
-                          <Typography variant="body2" color="text.secondary" align="center">
-                            <div>
+                          <div variant="body2" color="text.secondary" align="center">
                               {pokemon.types.map((type,i) => {
                                 return(
-                                  <p className={styles.types} style={{backgroundColor: port}}> {type.type.name} </p>
+                                  <p className={styles.types} style={{backgroundColor: `var(--${type.type.name})` }}> {type.type.name} </p>
                                 )
                               })}
-                            </div>
-                          </Typography>
+                          </div>
                         </div>
                       </CardContent>
                     </Card>
