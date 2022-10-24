@@ -88,8 +88,8 @@
 
 @media (max-width: 483px) {
     .MuiCardMediaimg {
+        height: 150px;
         display: flex;
-        height:150px;
         max-width: 400px;
         width: 300px;
     }
@@ -103,6 +103,7 @@
     .cardBody {
         width: 130px;
     }
+
     .pokemonNumber {
         padding-top: 0;
         margin-top: -6px;

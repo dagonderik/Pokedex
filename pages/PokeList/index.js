@@ -1,7 +1,7 @@
 import Header from "../../components/Header/Header.js";
 import Footer from "../../components/Footer/Footer.js";
 import styles from "../../styles/PokeList.module.css";
-import { Card, CardContent, Typography } from "@mui/material";
+import { Card, CardContent, Tooltip, Typography } from "@mui/material";
 
 export const getStaticProps = async () => {
   const interval = {
@@ -35,7 +35,7 @@ export default function PokeList({ pokemons }) {
                 <div className={styles.card} key={pokemon.id}>
                   <Card
                     className={styles.MuiCardMediaimg}
-                    sx={{ maxWidth: 250, height: 300 }}
+                    // sx={{ maxWidth: 250, height: 300 }}
                   >
                     <div className={styles.imgcontainer}>
                       <h3 className={styles.pokemonNumber}>{pokemon.id}</h3>
@@ -48,6 +48,7 @@ export default function PokeList({ pokemons }) {
                     <CardContent style={{ padding: "0" }}>
                       <div className={styles.cardBody}>
                         <Typography
+                          noWrap
                           variant="h5"
                           component="div"
                           align="center"
