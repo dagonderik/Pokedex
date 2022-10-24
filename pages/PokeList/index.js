@@ -16,7 +16,8 @@ export const getStaticProps = async () => {
   const urls = await rawData.results.map((u) => u.url);
   const pokeList = await Promise.all(urls.map((u) => fetch(u)));
   const pokemonList = await Promise.all(pokeList.map((res) => res.json()));
-  console.log(pokemonList[0].types[0].type.name);
+  console.log(pokemonList[0].sprites.versions['generation-v']['black-white'].animated.front_default);
+
 
   return {
     props: { pokemons: pokemonList },
@@ -35,7 +36,6 @@ export default function PokeList({ pokemons }) {
                 <div className={styles.card} key={pokemon.id}>
                   <Card
                     className={styles.MuiCardMediaimg}
-                    // sx={{ maxWidth: 250, height: 300 }}
                   >
                     <div className={styles.imgcontainer}>
                       <h3 className={styles.pokemonNumber}>{pokemon.id}</h3>
@@ -48,6 +48,7 @@ export default function PokeList({ pokemons }) {
                     <CardContent style={{ padding: "0" }}>
                       <div className={styles.cardBody}>
                         <Typography
+                          className={styles.pokemonName}
                           noWrap
                           variant="h5"
                           component="div"

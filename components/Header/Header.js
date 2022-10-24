@@ -6,8 +6,8 @@ export default function Header() {
             <div></div>
             <h1 className={style.h1}>PokeSearch</h1>
             <div className={style.navBar}>
-                <p>avatar</p>
-                <p>logout</p>
+                {/* <p>avatar</p>
+                <p>logout</p> */}
             </div>
         </div>
     )

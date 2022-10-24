@@ -3,8 +3,7 @@
 
 .container {
     padding: 0 2rem;
-    background-color: beige;
-    font-family: 'Roboto';
+    background-color: #EFFFFD;
     --normal: linear-gradient( #A8A77A, #85845e);
 	--fire: linear-gradient( #EE8130, #c26823);
 	--water: linear-gradient( #6390F0, #496bb4);
@@ -32,11 +31,13 @@
     flex: 2;
     justify-content: space-around;
     flex-wrap: wrap;
+    font-family: 'Londrina Solid';
 }
 
 .card {
     margin: 20px;
     transition-duration: 0.5s;
+    box-shadow: 5px 5px 5px  rgb(100, 100, 100);
 }
 
 .MuiCardMediaimg {
@@ -47,7 +48,7 @@
 .card:hover {
     transform: scale(105%);
     transform-origin: 50%;
-    
+    box-shadow: 10px 9px 10px 5px rgba(62,66,66,0.25);
 }
 
 .imgcontainer {
@@ -59,11 +60,15 @@
 }
 
 .cardBody {
-    background-color: #AA8B56;
+    background-color: #F3C892;
     align-self: flex-end;
     padding: 20px 16px ;
     text-transform: capitalize;
     height: 150px;
+}
+
+.pokemonName {
+    font-family: 'Londrina Solid';
 }
 
 .pokemonNumber {
