@@ -28,7 +28,7 @@ export default function PokeList({ pokemons }) {
   return (
     <div>
       <div className={styles.container}>
-        <Header />
+        <Header title="PokeSearch"/>
         <div className={styles.main}>
           {pokemons ? (
             pokemons.map((pokemon, i) => {

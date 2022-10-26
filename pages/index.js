@@ -16,7 +16,7 @@ export default function Home() {
       <main className={styles.main}>
         <div>
           <h1 className={styles.title}>
-            PokeSearch
+            PokeBag
           </h1>
           <h4 className={styles.description}>Login to enjoy a personal Pokemon experience</h4>
         </div>
@@ -36,7 +36,7 @@ export default function Home() {
       </main>
 
       <footer className={styles.footer}>
-          Powered by
+          Powered by PokeAPI
       </footer>
     </div>
   )

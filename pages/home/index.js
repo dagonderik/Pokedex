@@ -14,7 +14,7 @@ export default function Home() {
 
       </Head>
 
-      <Header/>
+      <Header title='PokeBag'/>
       
 
       <div className={Style.main}>
@@ -39,7 +39,7 @@ export default function Home() {
           </Card>
         </div>
 
-        <div className={Style.card}>
+        {/* <div className={Style.card}>
           <Card sx={{ maxWidth: 350, maxHeight: 450 }}>
             <CardActionArea>
               <CardMedia
@@ -100,7 +100,7 @@ export default function Home() {
               </CardContent>
             </CardActionArea>
           </Card>
-        </div>
+        </div> */}
       </div> 
       <Footer></Footer>
     </div>
